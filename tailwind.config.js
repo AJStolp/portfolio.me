@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         light: "bg-white",
-        dark: "bg-slate-700",
+        dark: "bg-slate-800",
       },
     },
   },

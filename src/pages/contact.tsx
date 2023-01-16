@@ -1,6 +1,6 @@
 import Section from "@/components/section";
 import Div from "@/components/div";
 
-export default function Projects() {
-  return <Section></Section>;
+export default function Contact() {
+  return <Section>Contact</Section>;
 }
