@@ -1,3 +1,5 @@
+import Section from "./section";
+
 export default function Card() {
-  return <></>;
+  return <Section>Cards</Section>;
 }
