@@ -5,10 +5,19 @@ interface IButtonTypes {
   children?: React.ReactNode;
   buttontype: "primary" | "secondary" | "submit";
   className: string;
+  srLabel: string;
 }
 
-const ButtonTypes: React.FC<IButtonTypes> = ({ children, ...props }) => {
-  return <button {...props}>{children}</button>;
+const ButtonTypes: React.FC<IButtonTypes> = ({
+  srLabel,
+  children,
+  ...props
+}) => {
+  return (
+    <button {...props} aria-label={srLabel}>
+      {children}
+    </button>
+  );
 };
 
 export default ButtonTypes;
