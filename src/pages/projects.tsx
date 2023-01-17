@@ -1,6 +1,9 @@
-import Section from "@/components/section";
-import Div from "@/components/div";
+import Card from "@/components/card";
 
 export default function Projects() {
-  return <Section></Section>;
+  return (
+    <div className="test">
+      <Card />
+    </div>
+  );
 }

@@ -1,10 +1,9 @@
-type NavData = {
-  title: "Home" | "Contact" | "Projects";
-  href: string;
+type CardData = {
+  title: "Home" | "Projects";
+  copy: string;
 };
 
-export const NavDatas: { [key: string]: NavData } = {
-  home: { title: "Home", href: "/" },
-  projects: { title: "Projects", href: "/projects" },
-  contact: { title: "Contact", href: "/contact" },
+export const CardDatas: { [key: string]: CardData } = {
+  home: { title: "Home", copy: "/" },
+  projects: { title: "Projects", copy: "/projects" },
 };

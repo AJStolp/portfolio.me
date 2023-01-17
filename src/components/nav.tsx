@@ -1,40 +1,82 @@
 import { useState } from "react";
 import Link from "next/link";
-import Hamburger from "@/assets/hamburger.svg";
-import Close from "@/assets/close.svg";
-import Image from "next/image";
-import Button from "./button";
-import Section from "./section";
+// import Hamburger from "@/assets/hamburger.svg";
+// import Close from "@/assets/close.svg";
+// import Image from "next/image";
+// import Button from "@/components/button";
 import { NavDatas } from "@/component-data/nav-links";
+import { NavigationData } from "@/component-data/navigation";
 
 interface INav {
   activeLink?: string;
   links?: { label: string; href: string }[];
+  data?: [];
 }
 
 const Nav: React.FC<INav> = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
-      <Button
+      {/* add at later date when I have more items - logic is here */}
+      {/* <Button
         buttontype={"primary"}
-        className={`${
-          isOpen ? "sm:block md:block" : "hidden"
-        } md:hidden focus:outline-none`}
         onClick={() => setIsOpen(!isOpen)}
+        className={NavigationData.button.btnClassName}
       >
         {isOpen ? (
-          <Image src={Close} alt="hamburger" />
+          <span className="dark:text-white text-slate-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </span>
         ) : (
-          <Image src={Hamburger} alt="hamburger" />
+          <span className="dark:text-white text-slate-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </span>
+
+          //currentFill isnt accepted need to figure another way to abstract
+          // <Image src={Close} alt={NavigationData.closedMenu.alt} />
+          // <Image src={Hamburger} alt={NavigationData.openMenu.alt} />
         )}
-      </Button>
-      <Section className={`${isOpen ? "block" : "hidden"} flex flex-col`}>
-        <Link href={NavDatas.home.href}>{NavDatas.home.title}</Link>
-        <Link href={NavDatas.projects.href}>{NavDatas.projects.title}</Link>
-        <Link href={NavDatas.contact.title}>{NavDatas.contact.title}</Link>
-      </Section>
+      </Button> */}
+      {isOpen && (
+        // <section className={`${isOpen ? "grid grid-cols-2" : ""}`}>
+        <section className={NavigationData.parentSection.className}>
+          {NavDatas.map((val, index) => {
+            return (
+              <Link key={index} href={val.href} className={val.linkClassName}>
+                {val.title}
+              </Link>
+            );
+          })}
+        </section>
+        // {/* </section> */}
+      )}
     </>
   );
 };
