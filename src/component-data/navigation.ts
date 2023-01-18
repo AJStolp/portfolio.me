@@ -4,7 +4,7 @@ type Navigation = {
 
 export const NavigationData: { [key: string]: Navigation } = {
   parentSection: {
-    className: "flex flex-row justify-end gap-12",
+    className: "flex flex-row justify-end gap-3",
   },
   button: {
     btnClassName: "",
@@ -17,4 +17,7 @@ export const NavigationData: { [key: string]: Navigation } = {
     className: "",
     alt: "close x",
   },
+  // briefCaseParent: {
+  //   className: "bg-slate-800 dark-bg-slate-200",
+  // },
 };

@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "mnt-bg": "url('/assets/dark-silhouette.png')",
+      },
       colors: {},
     },
   },

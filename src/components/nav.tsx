@@ -69,25 +69,23 @@ const Nav: React.FC<INav> = () => {
         <section className={NavigationData.parentSection.className}>
           {NavDatas.map((val, index) => {
             return (
-              <Link key={index} href={val.href} className={val.linkClassName}>
-                {val.title}
-              </Link>
+              <section key={index}>
+                <Link
+                  aria-label={val.ariaLabel}
+                  href={val.href}
+                  className={val.linkClassName}
+                >
+                  {val.title}
+                </Link>
+                <img
+                  aria-label={val.ariaLabel}
+                  src={val.image}
+                  alt=""
+                  className={val.imgClass}
+                />
+              </section>
             );
           })}
-          {toggleCase && (
-            <div>
-              {NavDatas.map((val, index) => {
-                return (
-                  <img
-                    key={index}
-                    src={val.image}
-                    alt=""
-                    className={val.imgClass}
-                  />
-                );
-              })}
-            </div>
-          )}
         </section>
       )}
     </>
