@@ -11,33 +11,40 @@ type CardData = {
 export const CardDatas: CardData[] = [
   {
     title:
-      "Several projects that I have the pleasure to collaborate with amazing people on.",
-    titleClass: "text-slate-800 dark:text-white",
+      "Below, are several projects that I have had the pleasure to collaborate with amazing people on - from across the globe.",
+    titleClass:
+      "text-slate-800 dark:text-white m-auto w-11/12 text-xl lg:text-2xl",
     image: "/assets/silo.webp",
     imgClass: "px-4",
-    className: "bg-white max-w-5xl rounded-lg p-4 my-8 m-auto shadow-white",
+    className:
+      "bg-slate-800 dark:bg-slate-200  rounded-lg p-4 my-8 m-auto w-11/12",
   },
   {
     image: "/assets/jvl.webp",
     imgClass: "px-4",
-    className: "bg-white max-w-5xl rounded-lg p-4 my-8 m-auto",
+    className:
+      "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg p-4 my-8 m-auto w-11/12",
+    aos: "fade-up",
   },
   {
     image: "/assets/procore.webp",
     imgClass: "px-4",
-    className: "bg-white max-w-5xl rounded-lg py-8 my-8 m-auto",
-    aos: "fade-up",
+    className:
+      "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg py-8 my-8 m-auto w-11/12",
+    aos: "flip-up",
   },
   {
     image: "/assets/dupi.webp",
     imgClass: "px-4",
-    className: "bg-white max-w-5xl rounded-lg py-8 my-8 m-auto",
-    aos: "fade-left",
+    className:
+      "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg py-8 my-8 m-auto w-11/12",
+    aos: "fade-up",
   },
   {
     image: "/assets/pli.webp",
     imgClass: "px-4",
-    className: "bg-white max-w-5xl rounded-lg py-8 my-8 m-auto",
-    aos: "fade-right",
+    className:
+      "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg py-8 my-8 m-auto w-11/12",
+    aos: "flip-up",
   },
 ];

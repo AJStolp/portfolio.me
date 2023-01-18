@@ -1,9 +1,11 @@
 type NavLinkData = {
-  title?: "Home" | "Projects";
+  title?: "Home" | "Projects" | "LinkedIn" | "";
   href: string;
   data?: [];
-  linkSectionClassName: string;
+  linkSectionClassName?: string;
   linkClassName?: string;
+  image?: string;
+  imgClass?: string;
 };
 
 export const NavDatas: NavLinkData[] = [
@@ -14,6 +16,7 @@ export const NavDatas: NavLinkData[] = [
     linkClassName:
       "dark:text-white text-slate-800 flex justify-end text-xl dark:hover:text-orange-500 hover:text-orange-500 font-bold tracking-wider",
     data: [],
+    // image: "/assets/briefcase.webp",
   },
   {
     title: "Projects",
@@ -22,5 +25,11 @@ export const NavDatas: NavLinkData[] = [
     linkClassName:
       "dark:text-white text-slate-800 hover:text-orange-500 flex justify-end text-xl font-bold tracking-wider dark:hover:text-orange-500",
     data: [],
+  },
+  {
+    title: "yaya",
+    image: "/assets/briefcase.webp",
+    imgClass: "w-8 rounded",
+    href: "",
   },
 ];
