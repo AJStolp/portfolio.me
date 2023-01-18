@@ -12,7 +12,7 @@ interface IHero {
 const Hero: React.FC<IHero> = ({ title, className, children }) => {
   const waveEmoji = "\u{1F44B}";
   return (
-    <div className="dark:bg-gray-800 dark:text-gray-100">
+    <div className=" dark:text-gray-100">
       <div className="container flex flex-col justify-center items-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-evenly">
         <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
           <img
@@ -28,7 +28,7 @@ const Hero: React.FC<IHero> = ({ title, className, children }) => {
               {HeroDatas.hero.colorName}
             </span>
           </h1>
-          <p id="styled-code" className="mt-6 mb-8 text-lg sm:mb-12 font-mono">
+          <p id="styled-code" className="mt-6 mb-8 text-xl sm:mb-12 font-mono">
             {HeroDatas.hero.copy}
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
