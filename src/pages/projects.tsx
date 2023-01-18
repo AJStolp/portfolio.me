@@ -2,7 +2,7 @@ import Card from "@/components/card";
 
 export default function Projects() {
   return (
-    <div className="test">
+    <div className="m-auto">
       <Card />
     </div>
   );

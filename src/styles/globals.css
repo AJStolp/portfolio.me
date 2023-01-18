@@ -9,3 +9,21 @@
   padding: 0;
   margin: 0;
 }
+
+#styled-code:before {
+  content: '<p>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 1.8rem;
+  margin-top: -5rem;
+  padding: 0 0.35rem 0.35rem 0;
+}
+
+#styled-code:after {
+  content: '<p>';
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+  font-size: 1.8rem;
+  margin-top: -5rem;
+  padding-left: 0.35rem;
+}

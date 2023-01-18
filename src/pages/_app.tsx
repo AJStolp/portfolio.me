@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <div className="h-screen w-screen p-6 bg-slate-200 dark:bg-slate-800">
+    <div className="min-h-screen min-w-screen  p-6 bg-slate-200 dark:bg-slate-800">
       <div className="grid grid-cols-2 items-center">
         <Button
           className="dark:text-white p-2 rounded"
