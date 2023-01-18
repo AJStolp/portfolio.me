@@ -15,6 +15,7 @@ interface INav {
 
 const Nav: React.FC<INav> = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [toggleCase, setToggleCase] = useState(true);
 
   return (
     <>
@@ -65,7 +66,6 @@ const Nav: React.FC<INav> = () => {
         )}
       </Button> */}
       {isOpen && (
-        // <section className={`${isOpen ? "grid grid-cols-2" : ""}`}>
         <section className={NavigationData.parentSection.className}>
           {NavDatas.map((val, index) => {
             return (
@@ -74,8 +74,21 @@ const Nav: React.FC<INav> = () => {
               </Link>
             );
           })}
+          {toggleCase && (
+            <div>
+              {NavDatas.map((val, index) => {
+                return (
+                  <img
+                    key={index}
+                    src={val.image}
+                    alt=""
+                    className={val.imgClass}
+                  />
+                );
+              })}
+            </div>
+          )}
         </section>
-        // {/* </section> */}
       )}
     </>
   );

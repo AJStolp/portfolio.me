@@ -12,7 +12,7 @@ const Card = () => {
     <>
       {CardDatas.map((val, index) => {
         return (
-          <div key={index}>
+          <div key={index} className="my-16">
             <h1 className={val.titleClass}>{val.title}</h1>
             <section key={index} className={val.className} data-aos={val.aos}>
               <img src={val.image} className={val.imgClass} />
