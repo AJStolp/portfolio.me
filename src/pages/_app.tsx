@@ -11,24 +11,22 @@ export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
   const [className, setClassName] = useState("bg-white");
 
-  // bg-[url('/assets/lake-sil.png')]  dark:bg-[url('/assets/my-custom-sil.png')] bg-no-repeat bg-cover bg-bottom
-
   const router = useRouter();
   useEffect(() => {
     if (router.pathname === "/") {
       setClassName(
-        "bg-[url('/assets/lake-sil.png')] dark:bg-[url('/assets/home/my-custom-sil.png')] bg-no-repeat bg-cover bg-bottom"
+        "bg-[url('/assets/lake-sil.webp')] dark:bg-[url('/assets/my-custom-sil.webp')] bg-no-repeat bg-cover bg-bottom"
       );
     } else if (router.pathname === "/projects") {
       setClassName(
-        "bg-[url('/assets/projects/prj-light.png')] dark:bg-[url('/assets/projects/prj-dark.png')] bg-no-repeat bg-cover"
+        "bg-[url('/assets/projects/prj-light.webp')] dark:bg-[url('/assets/projects/prj-dark.webp')] bg-no-repeat bg-cover"
       );
     }
   }, [router.pathname]);
 
   return (
-    <div className={`${className} min-h-screen min-w-screen p-6`}>
-      <div className="flex flex-row justify-start md:justify-end gap-4 items-center">
+    <div className={`${className} min-h-screen min-w-screen`}>
+      <div className="flex flex-row justify-center md:justify-end gap-4 items-center p-4">
         <Button
           className="dark:text-white p-2 rounded bg-slate-400 dark:bg-slate-500"
           onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}

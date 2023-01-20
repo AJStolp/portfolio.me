@@ -23,7 +23,7 @@ export const NavDatas: NavLinkData[] = [
     href: "/",
     linkSectionClassName: "",
     linkClassName:
-      "dark:text-white text-slate-100 bg-slate-800 rounded p-2 flex justify-end text-xl dark:hover:text-orange-500 hover:text-orange-500 font-bold tracking-wider",
+      "dark:text-white text-amber-400 bg-slate-800 rounded p-2 flex justify-end text-xl dark:hover:text-amber-400 hover:text-slate-100 font-bold tracking-wider",
     ariaLabel: "Get introuduced.",
     data: [],
   },
@@ -32,7 +32,7 @@ export const NavDatas: NavLinkData[] = [
     href: "/projects",
     linkSectionClassName: "",
     linkClassName:
-      "dark:text-white text-slate-100 bg-slate-800 rounded p-2 hover:text-orange-500 flex justify-end text-xl font-bold tracking-wider dark:hover:text-orange-500",
+      "dark:text-white text-amber-400 bg-slate-800 rounded p-2 hover:text-orange-500 flex justify-end text-xl font-bold tracking-wider dark:hover:text-amber-400",
     data: [],
     ariaLabel: "Take a look at the projects I have worked on.",
   },
@@ -53,12 +53,4 @@ export const NavDatas: NavLinkData[] = [
       linkedin: "LinkedIn",
     },
   },
-  // {
-  //   title: "",
-  //   image: "/assets/white-paperclip.png",
-  //   imgClass: "w-32 rounded",
-  //   href: "",
-  //   linkSectionClassName: "",
-  //   ariaLabel: "Checkout my Github and LinkedIn.",
-  // },
 ];
