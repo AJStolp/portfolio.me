@@ -22,7 +22,7 @@ const Hero: React.FC<IHero> = ({ title, className, children }) => {
             className="object-contain h-1/5 sm:h-80 lg:h-1/5 xl:h-112 2xl:h-128 rounded-xl"
           />
         </div> */}
-        <div className="dark:bg-transparent bg-slate-100/25 flex flex-col justify-center p-6 rounded-sm w-fit lg:w-1/2 text-left lg:text-left">
+        <div className="dark:bg-transparent bg-slate-100/25 flex flex-col justify-center p-4 lg:p-6 rounded-sm w-fit lg:w-1/2 text-left lg:text-left">
           <h1 className="text-3xl text-slate-900 dark:text-slate-100 font-bold md:text-6xl">
             {waveEmoji}, {HeroDatas.hero.heading}
             <span className="dark:text-violet-400 text-amber-400 text-outline-black text-outline tracking-wide">

@@ -3,9 +3,10 @@ import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
 import silo from "../../public/assets/projects/silo.webp";
 import jvl from "../../public/assets/projects/jvl.webp";
-import procore from "../../public/assets/projects/procore.png";
+import procore from "../../public/assets/projects/procore.webp";
 import dupixent from "../../public/assets/projects/dupi.webp";
 import pli from "../../public/assets/projects/pli.webp";
+import ada from "../../public/assets/projects/ada.webp";
 
 interface CarouselProps {
   prjImages: StaticImageData[];
@@ -18,7 +19,14 @@ const Carousel: React.FC<CarouselProps> = () => {
   // const [startX, setStartX] = useState(0);
   // const [endX, setEndX] = useState(0);
 
-  const [projImages, setImages] = useState([silo, jvl, procore, dupixent, pli]);
+  const [projImages, setImages] = useState([
+    silo,
+    jvl,
+    procore,
+    dupixent,
+    pli,
+    ada,
+  ]);
 
   // mess around with swipe later
   // useEffect(() => {
@@ -63,10 +71,14 @@ const Carousel: React.FC<CarouselProps> = () => {
   // };
 
   return (
-    <div className="relative h-96 md:h-auto" ref={carouselRef}>
-      <Image src={projImages[currentIndex]} alt="" style={{ height: "75%" }} />
+    <div className="relative h-full md:h-auto" ref={carouselRef}>
+      <Image
+        src={projImages[currentIndex]}
+        alt=""
+        style={{ height: "100%", borderRadius: "1%" }}
+      />
 
-      <div className="absolute bottom-0 right-0 p-4 bg-slate-800/75 rounded w-full text-center md:m-4 md:w-fit">
+      <div className="absolute -bottom-20 md:bottom-0 right-0 p-4 bg-slate-800/75 rounded w-full text-center md:m-4 md:w-fit">
         <button
           onClick={handlePrevious}
           className="bg-gray-700 text-white p-2 mr-4 w-28"
