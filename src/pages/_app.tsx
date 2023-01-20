@@ -3,26 +3,40 @@ import "@/styles/globals.css";
 import useColorMode from "@/hooks/use-theme";
 import Button from "@/components/button";
 import Nav from "@/components/nav";
-import DarkSilhouette from "@/assets/dark-silhouette.png";
-import Image from "next/image";
+// import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
+  const [className, setClassName] = useState("bg-white");
+
+  // bg-[url('/assets/lake-sil.png')]  dark:bg-[url('/assets/my-custom-sil.png')] bg-no-repeat bg-cover bg-bottom
+
+  const router = useRouter();
+  useEffect(() => {
+    if (router.pathname === "/") {
+      setClassName(
+        "bg-[url('/assets/lake-sil.png')] dark:bg-[url('/assets/home/my-custom-sil.png')] bg-no-repeat bg-cover bg-bottom"
+      );
+    } else if (router.pathname === "/projects") {
+      setClassName(
+        "bg-[url('/assets/projects/prj-light.png')] dark:bg-[url('/assets/projects/prj-dark.png')] bg-no-repeat bg-cover"
+      );
+    }
+  }, [router.pathname]);
 
   return (
-    <div className="min-h-screen min-w-screen p-6 bg-[url('/assets/lake-sil.png')]  dark:bg-[url('/assets/my-custom-sil.png')]">
-      {/* <section className="relative">
-        <Image src={DarkSilhouette} alt="" />
-      </section> */}
-      <div className="flex flex-row justify-end items-center">
+    <div className={`${className} min-h-screen min-w-screen p-6`}>
+      <div className="flex flex-row justify-start md:justify-end gap-4 items-center">
         <Button
-          className="dark:text-white p-2 rounded"
+          className="dark:text-white p-2 rounded bg-slate-400 dark:bg-slate-500"
           onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           buttontype={"primary"}
           srLabel="light and dark toggle"
         >
           {colorMode === "light" ? (
-            <span className="text-slate-800 dark:text-slate-800">
+            <span className="text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -40,7 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
             </span>
           ) : (
             //Next Image does not accept currentColor for somereason. Cannt get svg to take color of parent. Eventually abstract this so it is cleaner.
-            <span className=" text-amber-400">
+            <span className="text-amber-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

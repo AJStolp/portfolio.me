@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 // import Hamburger from "@/assets/hamburger.svg";
 // import Close from "@/assets/close.svg";
@@ -15,7 +15,8 @@ interface INav {
 
 const Nav: React.FC<INav> = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [toggleCase, setToggleCase] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <>
@@ -69,20 +70,56 @@ const Nav: React.FC<INav> = () => {
         <section className={NavigationData.parentSection.className}>
           {NavDatas.map((val, index) => {
             return (
-              <section key={index}>
-                <Link
-                  aria-label={val.ariaLabel}
-                  href={val.href}
-                  className={val.linkClassName}
-                >
-                  {val.title}
-                </Link>
-                <img
-                  aria-label={val.ariaLabel}
-                  src={val.image}
-                  alt=""
-                  className={val.imgClass}
-                />
+              <section key={index} className="group ">
+                <section>
+                  <Link
+                    aria-label={val.ariaLabel}
+                    href={val.href}
+                    className={val.linkClassName}
+                  >
+                    {val.title}
+                  </Link>
+                </section>
+                <section className={val.linkSectionClassName}>
+                  <img
+                    aria-label={val.ariaLabel}
+                    src={val.image}
+                    alt=""
+                    className={val.imgClass}
+                    onTouchStart={() =>
+                      setTimeout(() => setIsActive(true), 100)
+                    }
+                    onTouchEnd={() =>
+                      setTimeout(() => setIsActive(false), 5000)
+                    }
+                    onMouseEnter={() =>
+                      setTimeout(() => setIsActive(true), 100)
+                    }
+                    onMouseLeave={() =>
+                      setTimeout(() => setIsActive(false), 5000)
+                    }
+                  />
+                  {isActive && (
+                    <div className="w-100 h-100 hover:z-20 block">
+                      {val.socialLinks?.github && (
+                        <Link
+                          href={val.socialLinks.githubLink}
+                          className={val.socialLinks.className}
+                        >
+                          {val.socialLinks.github}
+                        </Link>
+                      )}
+                      {val.socialLinks?.linkedin && (
+                        <Link
+                          href={val.socialLinks.linkedinLink}
+                          className={val.socialLinks.className}
+                        >
+                          {val.socialLinks.linkedin}
+                        </Link>
+                      )}
+                    </div>
+                  )}
+                </section>
               </section>
             );
           })}

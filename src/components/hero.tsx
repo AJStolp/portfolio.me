@@ -1,6 +1,7 @@
 import React from "react";
 import { HeroDatas } from "@/component-data/hero-data";
 import { NavDatas } from "@/component-data/nav-links";
+import Link from "next/link";
 
 interface IHero {
   title: string;
@@ -13,18 +14,18 @@ const Hero: React.FC<IHero> = ({ title, className, children }) => {
   const waveEmoji = "\u{1F44B}";
   return (
     <div className=" dark:text-gray-100">
-      <div className="container flex flex-col justify-center items-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-evenly">
-        <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+      <div className="container flex flex-col justify-center items-center p-6 mx-auto sm:py-12 lg:py-10 lg:flex-row lg:justify-evenly mt-24 w-full">
+        {/* <div className="flex items-center justify-center p-6 mt-8 ">
           <img
             src={HeroDatas.hero.image}
             alt=""
-            className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded"
+            className="object-contain h-1/5 sm:h-80 lg:h-1/5 xl:h-112 2xl:h-128 rounded-xl"
           />
-        </div>
-        <div className="flex flex-col justify-center p-6 rounded-sm lg:max-w-md xl:max-w-lg text-left lg:text-left">
-          <h1 className="text-3xl font-bold leading-none md:text-6xl">
+        </div> */}
+        <div className="dark:bg-transparent bg-slate-100/25 flex flex-col justify-center p-6 rounded-sm w-fit lg:w-1/2 text-left lg:text-left">
+          <h1 className="text-3xl text-slate-900 dark:text-slate-100 font-bold md:text-6xl">
             {waveEmoji}, {HeroDatas.hero.heading}
-            <span className="dark:text-violet-400 text-violet-600">
+            <span className="dark:text-violet-400 text-amber-400 text-outline-black text-outline tracking-wide">
               {HeroDatas.hero.colorName}
             </span>
           </h1>
@@ -32,20 +33,20 @@ const Hero: React.FC<IHero> = ({ title, className, children }) => {
             {HeroDatas.hero.copy}
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-            <a
+            <Link
               rel="noopener noreferrer"
               href="/projects"
-              className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900 dark:hover:text-white hover:text-white bg-slate-800 text-violet-400"
+              className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900 dark:hover:text-white hover:text-white bg-slate-100 text-slate-900"
             >
               {HeroDatas.hero.cta1}
-            </a>
-            <a
+            </Link>
+            <Link
               rel="noopener noreferrer"
-              href="/projects"
-              className="px-8 py-3 text-lg font-semibold rounded bg-sky-400 dark:bg-white dark:text-gray-900 dark:hover:text-sky-400 hover:text-white bg-vilote-400 text-dark-400"
+              href="mailto: anthony.stolp@outlook.com"
+              className="px-8 py-3 text-lg font-semibold rounded bg-sky-400 dark:bg-white dark:text-gray-900 dark:hover:text-sky-400 hover:text-white bg-vilote-400 text-slate-800"
             >
               {HeroDatas.hero.cta2}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

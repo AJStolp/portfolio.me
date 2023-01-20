@@ -10,13 +10,20 @@
   margin: 0;
 }
 
+.text-outline {
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+.text-outline2 {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 21x 0 black;
+}
+
 #styled-code:before {
   content: '<p>';
   font-family: 'La Belle Aurore', cursive;
   color: #515152;
   font-size: 1.8rem;
   margin-top: -5rem;
-  padding: 0 0.35rem 0.35rem 0;
+  padding: 0 0.5rem 0.35rem 0;
 }
 
 #styled-code:after {
@@ -25,5 +32,5 @@
   color: #515152;
   font-size: 1.8rem;
   margin-top: -5rem;
-  padding-left: 0.35rem;
+  padding-left: 0.5rem;
 }

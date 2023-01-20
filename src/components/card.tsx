@@ -12,12 +12,12 @@ const Card = () => {
     <>
       {CardDatas.map((val, index) => {
         return (
-          <div key={index} className="my-16 w-4/6">
-            <h1 className={val.titleClass}>{val.title}</h1>
+          <>
             <section key={index} className={val.className} data-aos={val.aos}>
+              <div className="absolute bg-slate-800-25"></div>
               <img src={val.image} className={val.imgClass} />
             </section>
-          </div>
+          </>
         );
       })}
     </>
