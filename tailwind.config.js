@@ -13,6 +13,12 @@ module.exports = {
       backgroundImage: {
         "mnt-bg": "url('/assets/dark-silhouette.png')",
       },
+      height: {
+        135: "35rem",
+      },
+      maxWidth: {
+        63: "63rem",
+      },
       colors: {},
     },
   },
