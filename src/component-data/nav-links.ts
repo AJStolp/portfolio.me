@@ -32,7 +32,7 @@ export const NavDatas: NavLinkData[] = [
     href: "/projects",
     linkSectionClassName: "",
     linkClassName:
-      "dark:text-white text-amber-400 bg-slate-800 rounded p-2 hover:text-orange-500 flex justify-end text-xl font-bold tracking-wider dark:hover:text-amber-400",
+      "dark:text-white text-amber-400 bg-slate-800 rounded p-2 hover:text-white flex justify-end text-xl font-bold tracking-wider dark:hover:text-amber-400",
     data: [],
     ariaLabel: "Take a look at the projects I have worked on.",
   },
