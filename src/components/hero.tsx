@@ -36,7 +36,7 @@ const Hero: React.FC<IHero> = ({ title, className, children }) => {
             <Link
               rel="noopener noreferrer"
               href="/projects"
-              className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900 dark:hover:text-white hover:text-white bg-slate-100 text-slate-900"
+              className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900 dark:hover:text-white hover:text-sky-400 bg-slate-100 text-slate-900"
             >
               {HeroDatas.hero.cta1}
             </Link>
