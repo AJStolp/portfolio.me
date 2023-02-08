@@ -4,33 +4,26 @@
 
 @import "tailwindcss/utilities";
 
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.text-outline {
+.text-outline-thick {
   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
-.text-outline2 {
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 21x 0 black;
+.text-outline-thin {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
-#styled-code:before {
-  content: '<p>';
-  font-family: 'La Belle Aurore', cursive;
-  color: #515152;
-  font-size: 1.8rem;
-  margin-top: -5rem;
-  padding: 0 0.5rem 0.35rem 0;
+.nunito {
+  font-family: 'Nunito', sans-serif;
 }
 
-#styled-code:after {
-  content: '<p>';
-  font-family: 'La Belle Aurore', cursive;
-  color: #515152;
-  font-size: 1.8rem;
-  margin-top: -5rem;
-  padding-left: 0.5rem;
+.nunito-font-class-body {
+  @apply text-lg nunito;
 }
