@@ -10,27 +10,21 @@
   margin: 0;
 }
 
-.text-outline {
+.text-outline-thick {
   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
-.text-outline2 {
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 21x 0 black;
+.text-outline-thin {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
-
-#styled-code:before {
-  content: '<p>';
-  font-family: 'La Belle Aurore', cursive;
-  color: #515152;
-  font-size: 1.8rem;
-  margin-top: -5rem;
-  padding: 0 0.5rem 0.35rem 0;
+.rotate-card:hover {
+  transform: rotateY(180deg);
 }
-
-#styled-code:after {
-  content: '<p>';
-  font-family: 'La Belle Aurore', cursive;
-  color: #515152;
-  font-size: 1.8rem;
-  margin-top: -5rem;
-  padding-left: 0.5rem;
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.perspective {
+  perspective: 1000px;
+}
+.back-face-hidden {
+  backface-visibility: hidden;
 }

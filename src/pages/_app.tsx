@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       );
     } else if (router.pathname === "/projects") {
       setClassName(
-        "bg-[url('/assets/projects/prj-light.webp')] dark:bg-[url('/assets/projects/prj-dark.webp')] bg-no-repeat bg-cover"
+        "bg-[url('/assets/prj-light.webp')] dark:bg-[url('/assets/prj-dark.webp')] bg-no-repeat bg-cover"
       );
     }
   }, [router.pathname]);

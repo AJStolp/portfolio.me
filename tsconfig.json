@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@public/*": ["./public/*"],
+      "@public": ["./public/assets/*"],
       "@/*": ["./src/*"],
       "@components": ["./src/components/*"],
       "@component-data": ["./src/component-data/*"],
