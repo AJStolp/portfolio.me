@@ -15,13 +15,6 @@ const Hero: React.FC<IHero> = ({ title, className, children }) => {
   return (
     <div className=" dark:text-gray-100">
       <div className="container flex flex-col justify-center items-center p-6 mx-auto sm:py-12 lg:py-10 lg:flex-row lg:justify-evenly mt-24 w-full">
-        {/* <div className="flex items-center justify-center p-6 mt-8 ">
-          <img
-            src={HeroDatas.hero.image}
-            alt=""
-            className="object-contain h-1/5 sm:h-80 lg:h-1/5 xl:h-112 2xl:h-128 rounded-xl"
-          />
-        </div> */}
         <div className="dark:bg-transparent bg-slate-100/25 flex flex-col justify-center p-4 lg:p-6 rounded-sm w-fit lg:w-1/2 text-left lg:text-left">
           <h1 className="text-3xl text-slate-900 dark:text-slate-100 font-bold md:text-6xl">
             {waveEmoji}, {HeroDatas.hero.heading}
@@ -29,7 +22,10 @@ const Hero: React.FC<IHero> = ({ title, className, children }) => {
               {HeroDatas.hero.colorName}
             </span>
           </h1>
-          <p id="styled-code" className="mt-6 mb-8 text-xl sm:mb-12 font-mono">
+          <p
+            id="styled-code"
+            className="mt-6 mb-8 text-xl sm:mb-12 nunito-font-class-body"
+          >
             {HeroDatas.hero.copy}
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
