@@ -41,7 +41,7 @@ const ProfessionalGalleryData: IGallery[] = [
     ariaLabel: "I contributed to this project. polarlightsimaging.com",
     alt: "polarlightimaging.com",
     projectDescription:
-      "Polar Lights Imaging is a custom solution designed for a small business to display their 3D real estate tours. Built with the versatile React programming language and the user-friendly Bootstrap CSS framework, Polar Lights Imaging offers an effortless for the business way to showcase their property tours.",
+      "Polar Lights Imaging is a custom solution designed for a small business to display their 3D real estate tours. Built with the versatile React programming language and the user-friendly Bootstrap CSS framework, Polar Lights Imaging offers an effortless approach for the business to showcase their property tours.",
   },
 ];
 export default ProfessionalGalleryData;
