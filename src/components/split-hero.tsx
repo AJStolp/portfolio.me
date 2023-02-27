@@ -15,11 +15,13 @@ const SplitHero = ({ data }: ISplitHero) => {
     <section className="text-dark dark:text-white flex justify-center items-center h-screen">
       {data.map((val, index) => {
         return (
-          <div className="container grid grid-cols gap-6 md:grid-cols-2 justify-center p-6 lg:p-0 mx-auto sm:py-12 max-w-6xl">
+          <div
+            className="container grid grid-cols gap-6 md:grid-cols-2 justify-center p-6 lg:p-0 mx-auto sm:py-12 max-w-6xl"
+            key={index}
+          >
             <div className="order-2 md:order-1 p-4 md:p-6 rounded-sm flex flex-col justify-center">
-              {waveEmoji}
               <h1 className="marker-font-class-heading text-4xl lg:text-5xl font-bold dark:text-white text-blue-500">
-                {val.heading}
+                {waveEmoji},{val.heading}
               </h1>
               <p className="text-xl lg:text-2xl py-5 nunito-font-class-body dark:text-secondaryText">
                 {val.copy}
@@ -58,3 +60,13 @@ const SplitHero = ({ data }: ISplitHero) => {
 };
 
 export default SplitHero;
+
+export async function getStaticProps() {
+  const data = HeroData;
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
