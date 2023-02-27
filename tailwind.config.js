@@ -35,7 +35,15 @@ module.exports = {
       maxWidth: {
         63: "63rem",
       },
-      colors: {},
+      colors: {
+        black: "#18191A",
+        lightBlack: "#181818",
+        darkTopGradient: "#404040",
+        darkBottomGradient: "#282828",
+        primaryText: "#FFFFFF",
+        secondaryText: "#E4E6EB",
+        card: "#242526",
+      },
     },
   },
   plugins: [Myclass],

@@ -38,7 +38,7 @@ const Gallery = ({ data }: Props) => {
                     className="h-full w-full"
                   />
                 </section>
-                <div className="nunito-font-class-body absolute my-rotate-y-180 backface-hidden w-full h-full bg-white overflow-hidden p-4 flex justify-center items-center">
+                <div className="nunito-font-class-body absolute my-rotate-y-180 backface-hidden w-full h-full bg-card text-white dark:bg-white dark:text-black overflow-hidden p-4 flex justify-center items-center">
                   {val.projectDescription}
                 </div>
               </section>

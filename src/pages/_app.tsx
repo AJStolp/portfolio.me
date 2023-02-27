@@ -3,24 +3,22 @@ import "@/styles/globals.css";
 import useColorMode from "@/hooks/use-theme";
 import Button from "@/components/button";
 import Nav from "@/components/nav";
-// import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
-  const [className, setClassName] = useState("bg-white");
+  const [className, setClassName] = useState(String);
 
   const router = useRouter();
   useEffect(() => {
     if (router.pathname === "/") {
-      setClassName(
-        "bg-[url('/assets/lake-sil.webp')] dark:bg-[url('/assets/my-custom-sil.webp')] bg-no-repeat bg-cover bg-bottom"
-      );
+      setClassName("bg-white dark:bg-black");
     } else if (router.pathname === "/projects") {
       setClassName(
         "bg-[url('/assets/prj-light.webp')] dark:bg-[url('/assets/prj-dark.webp')] bg-no-repeat bg-cover"
       );
+      setClassName("bg-white dark:bg-black bg-cover bg-bottom");
     }
   }, [router.pathname]);
 
@@ -28,13 +26,13 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={`${className} min-h-screen min-w-screen`}>
       <div className="flex flex-row justify-center md:justify-end gap-4 items-center p-4">
         <Button
-          className="dark:text-white p-2 rounded bg-slate-400 dark:bg-slate-500"
+          className="p-2 border-b-2 border-transparent dark:hover:border-amber-400"
           onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           buttontype={"primary"}
           srLabel="light and dark toggle"
         >
           {colorMode === "light" ? (
-            <span className="text-white">
+            <span className="text-black">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
