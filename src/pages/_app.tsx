@@ -6,7 +6,7 @@ import Nav from "@/components/nav";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { initGA } from "@/utils/ga";
+// import { initGA } from "@/utils/ga";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
@@ -42,10 +42,6 @@ export default function App({ Component, pageProps }: AppProps) {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, [cursorPos, elementPos]);
-
-  useEffect(() => {
-    initGA();
-  }, []);
 
   const maskWidth = 300; // replace with your mask width
   const maskHeight = 300; // replace with your mask height
