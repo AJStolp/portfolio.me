@@ -5,6 +5,7 @@ import Button from "@/components/button";
 import Nav from "@/components/nav";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
@@ -58,10 +59,14 @@ export default function App({ Component, pageProps }: AppProps) {
           WebkitMaskPosition: maskPosition,
         }}
       >
-        <img
+        <Image
           className="h-full w-full"
           src="/assets/sunset-bg.webp"
           alt="Random"
+          height={400}
+          width={400}
+          style={{ width: "100%", height: "100%" }}
+          priority
         />
       </div>
 

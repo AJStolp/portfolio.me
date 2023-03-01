@@ -5,7 +5,7 @@ import Link from "next/link";
 // import Image from "next/image";
 // import Button from "@/components/button";
 import { NavDatas } from "@/component-data/nav-links";
-import { NavigationData } from "@/component-data/navigation";
+import { NavigationData } from "@/component-data/navigation-data";
 
 interface INav {
   activeLink?: string;
@@ -105,6 +105,7 @@ const Nav: React.FC<INav> = () => {
                         <Link
                           href={val.socialLinks.githubLink}
                           className={val.socialLinks.className}
+                          target="_blank"
                         >
                           {val.socialLinks.github}
                         </Link>
@@ -113,6 +114,7 @@ const Nav: React.FC<INav> = () => {
                         <Link
                           href={val.socialLinks.linkedinLink}
                           className={val.socialLinks.className}
+                          target="_blank"
                         >
                           {val.socialLinks.linkedin}
                         </Link>

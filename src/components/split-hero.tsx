@@ -50,6 +50,7 @@ const SplitHero = ({ data }: ISplitHero) => {
                 height={400}
                 width={400}
                 style={{ width: "auto", height: "auto" }}
+                priority
               ></Image>
             </div>
           </div>
