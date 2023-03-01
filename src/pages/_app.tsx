@@ -72,7 +72,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <div className="flex flex-row justify-center md:justify-end gap-4 items-center p-4">
         <Button
-          className="p-2 border-b-2 border-transparent dark:hover:border-amber-400 z-10"
+          className="p-2 border-b-2 border-transparent dark:hover:border-amber-400 z-10 bg-white dark:bg-black"
           onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           buttontype={"primary"}
           srLabel="light and dark toggle"
