@@ -13,7 +13,7 @@ export default function Document() {
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         ></script>
-        <script src="/utils/ga.js"></script>
+        <script async src="/utils/ga.js"></script>
       </Head>
       <body className="dark">
         <Main />
