@@ -1,6 +1,7 @@
 import Head from "next/head";
 import useColorMode from "@/hooks/use-theme";
-import Hero from "@/components/hero";
+import HeroData from "@/component-data/hero-data";
+import SplitHero from "@/components/split-hero";
 
 export default function Home() {
   const [colorMode, setColorMode] = useColorMode();
@@ -13,9 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero title={""} className={""} image={""}>
-        {}
-      </Hero>
+      <SplitHero data={HeroData}></SplitHero>
     </>
   );
 }

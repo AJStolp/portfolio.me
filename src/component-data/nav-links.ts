@@ -1,4 +1,5 @@
 type NavLinkData = {
+  id: number;
   title?: "Home" | "Projects" | "LinkedIn" | "";
   href: string;
   data?: [];
@@ -19,37 +20,40 @@ type NavLinkData = {
 
 export const NavDatas: NavLinkData[] = [
   {
+    id: 1,
     title: "Home",
     href: "/",
     linkSectionClassName: "",
     linkClassName:
-      "dark:text-white text-amber-400 bg-slate-800 rounded p-2 flex justify-end text-xl dark:hover:text-amber-400 hover:text-slate-100 font-bold tracking-wider",
+      "dark:text-white text-black hover:underline rounded p-2 flex justify-end text-xl dark:hover:text-amber-400 font-bold tracking-wider",
     ariaLabel: "Get introuduced.",
     data: [],
   },
   {
+    id: 2,
     title: "Projects",
     href: "/projects",
     linkSectionClassName: "",
     linkClassName:
-      "dark:text-white text-amber-400 bg-slate-800 rounded p-2 hover:text-white flex justify-end text-xl font-bold tracking-wider dark:hover:text-amber-400",
+      "dark:text-white text-black hover:underline rounded p-2 flex justify-end text-xl font-bold tracking-wider dark:hover:text-amber-400",
     data: [],
     ariaLabel: "Take a look at the projects I have worked on.",
   },
   {
+    id: 3,
     title: "",
     image: "/assets/paperclip.svg",
     imgClass: "w-10 rounded p-2",
     href: "",
     linkSectionClassName:
-      "flex flex-row items-center rounded bg-slate-400 dark:bg-slate-500 relative",
+      "flex flex-row items-center rounded bg-white text-white relative",
     ariaLabel: "Checkout my Github and LinkedIn.",
     socialLinks: {
       githubLink: "https://www.Github.com/AJstolp",
       linkedinLink: "https://www.LinkedIn.com/in/anthonyjstolp",
       github: "GitHub",
       className:
-        "text-primary p-2 hover:text-white font-bold tracking-wide transform hover:scale-110 hero-name",
+        "text-black hover:underline p-2 font-bold tracking-wide transform hover:scale-110 hero-name",
       linkedin: "LinkedIn",
     },
   },

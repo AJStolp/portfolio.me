@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { IGallery } from "@/interfaces/IGallery";
+import PersonalGalleryData from "@/component-data/personal-gallery-data";
+import ProfessionalGalleryData from "@/component-data/professional-gallery-data";
 
 interface Props {
   data: IGallery[];
@@ -25,7 +27,7 @@ const Gallery = ({ data }: Props) => {
           return (
             <div
               className="bg-transparent cursor-pointer group perspective"
-              key={index}
+              key={val.id}
             >
               <section className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-[16.875rem] duration-1000">
                 <section className="absolute backface-hidden w-full h-full">
@@ -38,7 +40,7 @@ const Gallery = ({ data }: Props) => {
                     className="h-full w-full"
                   />
                 </section>
-                <div className="nunito-font-class-body absolute my-rotate-y-180 backface-hidden w-full h-full bg-white overflow-hidden p-4 flex justify-center items-center">
+                <div className="nunito-font-class-body absolute my-rotate-y-180 backface-hidden w-full h-full bg-card text-white dark:bg-white dark:text-black overflow-hidden p-4 flex justify-center items-center">
                   {val.projectDescription}
                 </div>
               </section>
@@ -51,3 +53,13 @@ const Gallery = ({ data }: Props) => {
 };
 
 export default Gallery;
+
+export async function getStaticProps() {
+  const data = [ProfessionalGalleryData, PersonalGalleryData];
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
