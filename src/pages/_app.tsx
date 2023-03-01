@@ -36,16 +36,16 @@ export default function App({ Component, pageProps }: AppProps) {
       });
     };
 
-    useEffect(() => {
-      initGA();
-    }, []);
-
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, [cursorPos, elementPos]);
+
+  useEffect(() => {
+    initGA();
+  }, []);
 
   const maskWidth = 300; // replace with your mask width
   const maskHeight = 300; // replace with your mask height
