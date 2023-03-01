@@ -7,10 +7,12 @@ type CardData = {
   imgClass: string;
   className: string;
   aos?: string;
+  id: number;
 };
 
 export const CardDatas: CardData[] = [
   {
+    id: 1,
     title:
       "Below, are several projects that I have had the pleasure to collaborate with talented people on - from across the globe.",
     titleClass:
@@ -21,6 +23,7 @@ export const CardDatas: CardData[] = [
     className: "bg-slate-800 dark:bg-slate-200  rounded-lg  m-auto w-11/12",
   },
   {
+    id: 2,
     image: "/assets/projects/jvl.webp",
     alt: "johsosonville.com",
     imgClass: "",
@@ -29,6 +32,7 @@ export const CardDatas: CardData[] = [
     // aos: "fade-up",
   },
   {
+    id: 3,
     image: "/assets/projects/procore.webp",
     alt: "procore.com",
     imgClass: "",
@@ -37,6 +41,7 @@ export const CardDatas: CardData[] = [
     // aos: "flip-up",
   },
   {
+    id: 4,
     image: "/assets/projects/dupi.webp",
     alt: "dupixent.com",
     imgClass: "",
@@ -45,6 +50,7 @@ export const CardDatas: CardData[] = [
     // aos: "fade-up",
   },
   {
+    id: 5,
     image: "/assets/projects/pli.webp",
     alt: "polarlightimaging.com",
     imgClass: "",

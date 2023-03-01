@@ -1,4 +1,5 @@
 type NavLinkData = {
+  id: number;
   title?: "Home" | "Projects" | "LinkedIn" | "";
   href: string;
   data?: [];
@@ -19,6 +20,7 @@ type NavLinkData = {
 
 export const NavDatas: NavLinkData[] = [
   {
+    id: 1,
     title: "Home",
     href: "/",
     linkSectionClassName: "",
@@ -28,6 +30,7 @@ export const NavDatas: NavLinkData[] = [
     data: [],
   },
   {
+    id: 2,
     title: "Projects",
     href: "/projects",
     linkSectionClassName: "",
@@ -37,6 +40,7 @@ export const NavDatas: NavLinkData[] = [
     ariaLabel: "Take a look at the projects I have worked on.",
   },
   {
+    id: 3,
     title: "",
     image: "/assets/paperclip.svg",
     imgClass: "w-10 rounded p-2",

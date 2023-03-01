@@ -27,7 +27,7 @@ const Gallery = ({ data }: Props) => {
           return (
             <div
               className="bg-transparent cursor-pointer group perspective"
-              key={index}
+              key={val.id}
             >
               <section className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-[16.875rem] duration-1000">
                 <section className="absolute backface-hidden w-full h-full">

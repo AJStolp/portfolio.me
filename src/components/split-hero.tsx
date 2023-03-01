@@ -12,21 +12,21 @@ const SplitHero = ({ data }: ISplitHero) => {
   const waveEmoji = "\u{1F44B}";
 
   return (
-    <section className="text-dark dark:text-white flex justify-center items-center h-screen">
+    <section className="text-dark dark:text-white mt-12 lg:mt-24 m-auto max-w-[63rem] flex items-center justify-center">
       {data.map((val, index) => {
         return (
           <div
-            className="container grid grid-cols gap-6 md:grid-cols-2 justify-center p-6 lg:p-0 mx-auto sm:py-12 max-w-6xl"
-            key={index}
+            className="container h-full grid grid-cols md:grid-cols-2 justify-center mx-auto sm:py-12 "
+            key={val.id}
           >
-            <div className="order-2 md:order-1 p-4 md:p-6 rounded-sm flex flex-col justify-center">
-              <h1 className="marker-font-class-heading text-4xl lg:text-5xl font-bold dark:text-white text-blue-500">
+            <div className="order-2 md:order-1 p-4 rounded-sm flex flex-col justify-center">
+              <h1 className="marker-font-class-heading text-4xl font-bold dark:text-white text-blue-500">
                 {waveEmoji},{val.heading}
               </h1>
-              <p className="text-xl lg:text-2xl py-5 nunito-font-class-body dark:text-secondaryText">
+              <p className="text-xl py-5 nunito-font-class-body dark:text-secondaryText">
                 {val.copy}
               </p>
-              <div className="flex flex-col space-y-4 md:flex-row md:justify-between md:items-baseline">
+              <div className="flex flex-col space-y-4 md:flex-row md:justify-between md:items-baseline z-10 cursor-pointer">
                 <Link
                   rel="noopener noreferrer"
                   href="/projects"
@@ -49,7 +49,7 @@ const SplitHero = ({ data }: ISplitHero) => {
                 alt={val.alt}
                 height={400}
                 width={400}
-                style={{ width: "fit-content", height: "fit-content" }}
+                style={{ width: "auto", height: "auto" }}
               ></Image>
             </div>
           </div>

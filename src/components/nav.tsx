@@ -67,10 +67,10 @@ const Nav: React.FC<INav> = () => {
         )}
       </Button> */}
       {isOpen && (
-        <section className={NavigationData.parentSection.className}>
+        <nav className={NavigationData.parentSection.className}>
           {NavDatas.map((val, index) => {
             return (
-              <section key={index} className="group ">
+              <section key={val.id} className="group ">
                 <section>
                   <Link
                     aria-label={val.ariaLabel}
@@ -123,7 +123,7 @@ const Nav: React.FC<INav> = () => {
               </section>
             );
           })}
-        </section>
+        </nav>
       )}
     </>
   );

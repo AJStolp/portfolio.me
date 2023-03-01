@@ -13,7 +13,7 @@ const Card = () => {
       {CardDatas.map((val, index) => {
         return (
           <>
-            <section key={index} className={val.className} data-aos={val.aos}>
+            <section key={val.id} className={val.className} data-aos={val.aos}>
               <div className="absolute bg-slate-800-25"></div>
               <img src={val.image} className={val.imgClass} />
             </section>

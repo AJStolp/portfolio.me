@@ -8,25 +8,66 @@ import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
-  const [className, setClassName] = useState(String);
+  const [className, setClassName] = useState("");
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [elementPos, setElementPos] = useState({ x: 0, y: 0 });
 
   const router = useRouter();
+
   useEffect(() => {
-    if (router.pathname === "/") {
+    const element = document.getElementById("element");
+    if (router.pathname === "/" && element) {
       setClassName("bg-white dark:bg-black");
-    } else if (router.pathname === "/projects") {
-      setClassName(
-        "bg-[url('/assets/prj-light.webp')] dark:bg-[url('/assets/prj-dark.webp')] bg-no-repeat bg-cover"
-      );
+      element.style.display = "block";
+    } else if (router.pathname === "/projects" && element) {
       setClassName("bg-white dark:bg-black bg-cover bg-bottom");
+      element.style.display = "none";
     }
+    setElementPos(element?.getBoundingClientRect() ?? { x: 0, y: 0 });
   }, [router.pathname]);
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursorPos({
+        x: e.clientX - elementPos.x,
+        y: e.clientY - elementPos.y,
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [cursorPos, elementPos]);
+
+  const maskWidth = 300; // replace with your mask width
+  const maskHeight = 300; // replace with your mask height
+  const maskPosition = `${cursorPos.x - maskWidth / 2}px ${
+    cursorPos.y - maskHeight / 2
+  }px`;
+
   return (
-    <div className={`${className} min-h-screen min-w-screen`}>
+    <div className={`${className} min-h-screen min-w-screen relative`}>
+      <div
+        className="element absolute top-0 right-0 bottom-0 left-0 h-full w-full"
+        id="element"
+        //needs to be abstracted
+        style={{
+          maskPosition: maskPosition,
+          WebkitMaskPosition: maskPosition,
+        }}
+      >
+        <img
+          className="h-full w-full"
+          src="/assets/sunset-bg.webp"
+          alt="Random"
+        />
+      </div>
+
       <div className="flex flex-row justify-center md:justify-end gap-4 items-center p-4">
         <Button
-          className="p-2 border-b-2 border-transparent dark:hover:border-amber-400"
+          className="p-2 border-b-2 border-transparent dark:hover:border-amber-400 z-10"
           onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           buttontype={"primary"}
           srLabel="light and dark toggle"

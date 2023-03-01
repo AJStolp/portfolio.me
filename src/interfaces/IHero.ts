@@ -6,4 +6,5 @@ export interface IHero {
   cta1: string;
   cta2: string;
   alt: string;
+  id: number;
 }
