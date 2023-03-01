@@ -37,6 +37,10 @@
 
 #element {
   /* there is a default display: block on the mask property that needs to be overriden.  */
+  display: none;
+}
+
+#bg-image {
   display: none !important;
 }
 
@@ -46,6 +50,9 @@
     mask-repeat: no-repeat;
     mask-size: 300px 300px;
     overflow: hidden;
-    display: block !important;
+    display: block;
   }
+    #bg-image {
+      display: block !important;
+    }
 }

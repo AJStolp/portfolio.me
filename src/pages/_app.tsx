@@ -18,10 +18,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const element = document.getElementById("element");
-    if (router.pathname === "/" && element) {
+    const bgImage = document.getElementById("bg-image");
+    if (router.pathname === "/" && element && bgImage) {
       setClassName("bg-white dark:bg-black");
       element.style.display = "block";
-    } else if (router.pathname === "/projects" && element) {
+    } else if (router.pathname === "/projects" && element && bgImage) {
       setClassName("bg-white dark:bg-black bg-cover bg-bottom");
       element.style.display = "none";
     }
@@ -63,6 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Image
           className="h-full w-full"
           src="/assets/sunset-bg.webp"
+          id="bg-image"
           alt="Random"
           height={400}
           width={400}
