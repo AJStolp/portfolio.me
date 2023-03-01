@@ -6,6 +6,7 @@ import Nav from "@/components/nav";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { initGA } from "@/utils/ga";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useColorMode();
@@ -34,6 +35,10 @@ export default function App({ Component, pageProps }: AppProps) {
         y: e.clientY - elementPos.y,
       });
     };
+
+    useEffect(() => {
+      initGA();
+    }, []);
 
     window.addEventListener("mousemove", handleMouseMove);
 
