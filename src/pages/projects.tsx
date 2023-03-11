@@ -24,7 +24,7 @@ export default function Projects() {
           Professional Projects
         </h2>
         <Gallery data={ProfessionalGalleryData} />
-        <h2 className="text-blue-50 text-xl tracking-wider font-bold my-4 p-2">
+        <h2 className="text-dark dark:text-blue-50 text-xl tracking-wider font-bold my-4 p-2">
           Personal Projects
         </h2>
         <Gallery data={PersonalGalleryData} />
