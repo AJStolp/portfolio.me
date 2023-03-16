@@ -19,14 +19,14 @@ export const CardDatas: CardData[] = [
       "text-slate-800 dark:text-white m-auto w-11/12 text-xl lg:text-2xl",
     image: "/assets/projects/silo.webp",
     alt: "sil.com",
-    imgClass: "",
+    imgClass: "rounded-t-lg",
     className: "bg-slate-800 dark:bg-slate-200  rounded-lg  m-auto w-11/12",
   },
   {
     id: 2,
     image: "/assets/projects/jvl.webp",
     alt: "johsosonville.com",
-    imgClass: "",
+    imgClass: "rounded-t-lg",
     className:
       "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg m-auto w-11/12",
     // aos: "fade-up",
@@ -35,7 +35,7 @@ export const CardDatas: CardData[] = [
     id: 3,
     image: "/assets/projects/procore.webp",
     alt: "procore.com",
-    imgClass: "",
+    imgClass: "rounded-t-lg",
     className:
       "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg  m-auto w-11/12",
     // aos: "flip-up",
@@ -44,7 +44,7 @@ export const CardDatas: CardData[] = [
     id: 4,
     image: "/assets/projects/dupi.webp",
     alt: "dupixent.com",
-    imgClass: "",
+    imgClass: "rounded-t-lg",
     className:
       "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg  m-auto w-11/12",
     // aos: "fade-up",
@@ -53,7 +53,7 @@ export const CardDatas: CardData[] = [
     id: 5,
     image: "/assets/projects/pli.webp",
     alt: "polarlightimaging.com",
-    imgClass: "",
+    imgClass: "rounded-t-lg",
     className:
       "bg-slate-800 dark:bg-slate-200 dark:bg-slate-800 rounded-lg  m-auto w-11/12",
     // aos: "flip-up",
