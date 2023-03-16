@@ -42,7 +42,7 @@ module.exports = {
         darkBottomGradient: "#282828",
         primaryText: "#FFFFFF",
         secondaryText: "#E4E6EB",
-        card: "#242526",
+        card: "#282828",
       },
     },
   },
