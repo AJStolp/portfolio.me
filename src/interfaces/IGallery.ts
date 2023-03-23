@@ -3,5 +3,5 @@ export interface IGallery {
   ariaLabel: string;
   alt: string;
   projectDescription: string;
-  id: number;
+  id: number | string;
 }
