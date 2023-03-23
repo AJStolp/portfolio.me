@@ -2,7 +2,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { NavDatas } from "@/component-data/nav-links";
 import { NavigationData } from "@/component-data/navigation-data";
-
 interface INav {
   activeLink?: string;
   links?: { label: string; href: string }[];
