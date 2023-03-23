@@ -1,4 +1,5 @@
 import { IHero } from "@/interfaces/IHero";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const HeroData: IHero[] = [
   {
@@ -13,4 +14,6 @@ const HeroData: IHero[] = [
   },
 ];
 
-export default HeroData;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json(HeroData);
+}

@@ -1,4 +1,5 @@
 import { IGallery } from "@/interfaces/IGallery";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const PersonalGalleryData: IGallery[] = [
   {
@@ -26,4 +27,6 @@ const PersonalGalleryData: IGallery[] = [
     projectDescription: "React, SCSS, Firebase",
   },
 ];
-export default PersonalGalleryData;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json(PersonalGalleryData);
+}
