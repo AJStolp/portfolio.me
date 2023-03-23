@@ -2,6 +2,7 @@ import React from "react";
 import { IHero } from "@/interfaces/IHero";
 import Link from "next/link";
 import Image from "next/image";
+import HeroData from "@/component-data/hero-data";
 
 interface ISplitHero {
   data: IHero[];
@@ -60,3 +61,13 @@ const SplitHero = ({ data }: ISplitHero) => {
 };
 
 export default SplitHero;
+
+export async function getStaticProps() {
+  const data = HeroData;
+
+  return {
+    props: {
+      data,
+    },
+  };
+}

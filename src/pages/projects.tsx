@@ -1,13 +1,9 @@
 import Head from "next/head";
 import Gallery from "@/components/gallery";
-import { IGallery } from "@/interfaces/IGallery";
+import ProfessionalGalleryData from "@/component-data/professional-gallery-data";
+import PersonalGalleryData from "@/component-data/personal-gallery-data";
 
-interface IProjects {
-  professionalData: IGallery[];
-  personalData: IGallery[];
-}
-
-export default function Projects(props: IProjects) {
+export default function Projects() {
   return (
     <>
       <Head>
@@ -27,31 +23,12 @@ export default function Projects(props: IProjects) {
         <h2 className="itim-font-class-heading dark:text-blue-50 text-dark text-xl tracking-wider font-bold my-4 p-2">
           Professional Projects
         </h2>
-        <Gallery data={props.professionalData} />
+        <Gallery data={ProfessionalGalleryData} />
         <h2 className="text-dark dark:text-blue-50 text-xl tracking-wider font-bold my-4 p-2">
           Personal Projects
         </h2>
-        <Gallery data={props.personalData} />
+        <Gallery data={PersonalGalleryData} />
       </div>
     </>
   );
-}
-async function fetchData(url: string) {
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
-}
-
-export async function getStaticProps() {
-  const [professionalData, personalData] = await Promise.all([
-    fetchData("http://localhost:3000/api/professional-gallery-data"),
-    fetchData("http://localhost:3000/api/personal-gallery-data"),
-  ]);
-
-  return {
-    props: {
-      professionalData,
-      personalData,
-    },
-  };
 }

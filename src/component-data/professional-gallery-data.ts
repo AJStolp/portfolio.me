@@ -1,5 +1,5 @@
 import { IGallery } from "@/interfaces/IGallery";
-import type { NextApiRequest, NextApiResponse } from "next";
+
 const ProfessionalGalleryData: IGallery[] = [
   {
     id: 1,
@@ -46,6 +46,4 @@ const ProfessionalGalleryData: IGallery[] = [
     projectDescription: "Javascript, BootStrap",
   },
 ];
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json(ProfessionalGalleryData);
-}
+export default ProfessionalGalleryData;

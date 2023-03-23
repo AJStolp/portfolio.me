@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { IGallery } from "@/interfaces/IGallery";
+import PersonalGalleryData from "@/component-data/personal-gallery-data";
+import ProfessionalGalleryData from "@/component-data/professional-gallery-data";
 
 interface Props {
   data: IGallery[];
 }
+
 const Gallery = ({ data }: Props) => {
   return (
     <>
@@ -40,3 +43,13 @@ const Gallery = ({ data }: Props) => {
 };
 
 export default Gallery;
+
+export async function getStaticProps() {
+  const data = [ProfessionalGalleryData, PersonalGalleryData];
+
+  return {
+    props: {
+      data,
+    },
+  };
+}

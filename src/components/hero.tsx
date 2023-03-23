@@ -1,4 +1,5 @@
 import React from "react";
+import HeroDatas from "@/component-data/hero-data";
 import Link from "next/link";
 
 interface IHero {
