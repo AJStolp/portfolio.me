@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { GA_TRACKING_ID, initGA } from "@/utils/ga";
+import { GA_TRACKING_ID, initGA } from "public/utils/ga";
 import { useEffect } from "react";
 import Script from "next/script";
 
