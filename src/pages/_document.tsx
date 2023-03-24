@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID, initGA } from "@/utils/ga";
 import { useEffect } from "react";
+import Script from "next/script";
 
 export default function Document() {
   useEffect(() => {
@@ -9,11 +10,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script
+        <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        ></script>
-        <script async src="/utils/ga.js"></script>
+        ></Script>
+        <Script async src="https://www.anthonystolp.dev/utils/ga.js"></Script>
       </Head>
       <body className="dark">
         <Main />
