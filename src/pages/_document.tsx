@@ -15,7 +15,7 @@ export default function Document() {
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           strategy="beforeInteractive"
         ></Script>
-        <Script async src="/utils/ga.js" strategy="beforeInteractive"></Script>
+        <Script async src="/utils/ga.ts" strategy="beforeInteractive"></Script>
       </Head>
       <body className="dark">
         <Main />
