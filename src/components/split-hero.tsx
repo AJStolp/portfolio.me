@@ -21,7 +21,7 @@ const SplitHero = ({ data }: ISplitHero) => {
           >
             <div className="order-2 md:order-1 p-4 rounded-sm flex flex-col justify-center">
               <h1 className="marker-font-class-heading text-4xl font-bold dark:text-white text-blue-500">
-                {waveEmoji},{val.heading}
+                {waveEmoji},&nbsp;{val.heading}
               </h1>
               <p className="text-xl py-5 nunito-font-class-body dark:text-secondaryText">
                 {val.copy}
