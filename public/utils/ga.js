@@ -1,18 +1,17 @@
-export const NEXT_PUBLIC_GA_TRACKING_ID = "G-TN8DYSWBR0";
+export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || "";
 
 export const initGA = () => {
-  const windowAny = window;
-  if (typeof windowAny === "undefined") {
-    return;
+  console.log("Initializing GA...");
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
   }
-
-  windowAny.dataLayer = windowAny.dataLayer || [];
-
-  function gtag(...args) {
-    windowAny.dataLayer.push(args);
-  }
-
   gtag("js", new Date());
 
-  gtag("config", NEXT_PUBLIC_GA_TRACKING_ID);
+  gtag("config", "G-M5P52QV0GF");
 };
+
+// log specific events happening.
+// export const event = ({ action, params }) => {
+//   window.gtag('event', action, params)
+// }
