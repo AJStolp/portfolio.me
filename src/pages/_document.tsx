@@ -15,6 +15,7 @@ export default function Document() {
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           strategy="beforeInteractive"
+          id=""
         />
         <Script
           dangerouslySetInnerHTML={{
