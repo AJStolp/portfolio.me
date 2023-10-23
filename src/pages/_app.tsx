@@ -52,7 +52,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <div className={`${className} min-h-screen min-w-screen relative`}>
-        <div
+        {/* <div
           className="element absolute top-0 right-0 bottom-0 left-0 h-full w-full"
           id="element"
           //needs to be abstracted
@@ -121,7 +121,8 @@ export default function App({ Component, pageProps }: AppProps) {
           </Button>
           <Nav />
         </div>
-        <Component {...pageProps} />
+        <Component {...pageProps} /> */}
+        <h1>We're Evolving. New Season, New Beginnings.</h1>
       </div>
     </>
   );
