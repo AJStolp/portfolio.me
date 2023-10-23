@@ -122,7 +122,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Nav />
         </div>
         <Component {...pageProps} /> */}
-        <h1>We're Evolving. New Season, New Beginnings.</h1>
+        <h1>We are Evolving. New Season, New Beginnings.</h1>
       </div>
     </>
   );
